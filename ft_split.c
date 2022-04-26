@@ -38,22 +38,20 @@ char **ft_split(char const *s, char c)
         else
         {
             i = 0;
-            while (*s && *s != c)
+            while (*s && *s != c && ++i)
             {
-                i++;
                 s++;
             }
-            arr[++a -1] =(char*)ft_calloc(i + 1, sizeof(char));
+            arr[a++] =(char*)ft_calloc(i + 1, sizeof(char));
             ft_strlcpy(arr[a - 1], s - i, i + 1); 
         }
     }
     return (arr);
 }
 
-/*
 int main()
 {
-	char *a ="ali,esma,gulcin,";
+	char *a ="ali,esma,gulcin";
 	char **mystr = ft_split(a, ',');
 	int i = 0;
 	while (mystr[i])
@@ -62,4 +60,3 @@ int main()
 		i++;
 	}
 } 
-*/
