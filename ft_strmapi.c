@@ -12,7 +12,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     i = 0;
     while (s[i])
     {
-        a[i] = f(i,s[i]); // unsigned int neden index değerine eşit??
+        a[i] = f(i,s[i]); //??
         i++; 
     }
     return (a);
