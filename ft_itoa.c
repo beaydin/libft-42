@@ -19,7 +19,7 @@ char *ft_itoa(int n)
 {
     int digit;
     char *str;
-
+    digit = count_digit(n);
     str = (char *)ft_calloc(count_digit(n) + 1, sizeof(char));
     if (!str)
         return (NULL);
@@ -43,8 +43,8 @@ char *ft_itoa(int n)
     return (str);
 }
 
-/*
+
 int	main()
 {
-	printf("%s", ft_itoa(-128967264));
-}*/
+	printf("%s", ft_itoa(-127264));
+}
